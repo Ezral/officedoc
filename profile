@@ -10,23 +10,28 @@ export PS1="\e[01;92m\\u@\\H:\e[m \e[01;36m\\W\e[m\\$ "
 #====================================================================================== 
 # Preferred way of using command
 alias hi='echo "Hello beautiful world!"'
-alias home='cd ~'					# Shortcut to home folder
+alias home='cd ~'						            # Shortcut to home folder
 alias desktop='cd /Users/medicalagent3/Desktop'		# Shortcut to Desktop folder
 alias download='cd /Users/medicalagent3/Downloads'	# Shortcut to Downloads folder
-alias application='cd /Applications'			# Shortcut to App folder
+alias application='cd /Applications'				# Shortcut to App folder
 alias editp='nano /Users/medicalagent3/.profile'	# Shortcut to edit .profile
-alias .='cd .'						# Preferred 'cd .' implementation
-alias ..='cd ..'					# Preferred 'cd ..' implementation
-alias ls='ls -G'					# Preferred 'ls' implementation
-alias c='clear'						# Preferred 'clear' implementation  
-alias ll='ls -FGlAhp'                  			# Advanced 'ls' implementation
-alias lsd='ll | grep "^d"'              		# Advanced 'ls' implementation, only dirs
-alias mkdir='mkdir -pv'                  		# Preferred 'mkdir' implementation
-alias mv='mv -iv'                         		# Preferred 'mv' implementation
-alias jup='jupyter notebook'
-
-
-
+alias .='cd .'					    	    	    # Preferred 'cd .' implementation
+alias ..='cd ..'			    	    	    	# Preferred 'cd ..' implementation
+alias ls='ls -G'		    			        	# Preferred 'ls' implementation
+alias c='clear'		    					        # Preferred 'clear' implementation  
+alias ll='ls -FGlAhp'                 	 			# Advanced 'ls' implementation
+alias lsd='ll | grep "^d"'              			# Advanced 'ls' implementation, only dirs
+alias mkdir='mkdir -pv'                  			# Preferred 'mkdir' implementation
+alias mv='mv -iv'                         			# Preferred 'mv' implementation
+alias jup='jupyter notebook'                       	# Shortcut to Jupyter Notebook 
+alias spd='speedtest'			           	      	# Shortcut to speedtest by Ookla
+alias webhr='python webhr_login.py'				    # Shortcut to webhr_login.py script
+alias gc='git commit'			                    # do git things quicker
+alias gco='git checkout' 
+alias gd='git diff'
+alias gpull='git pull'
+alias gpush='git push'
+alias gs='git status'
 #======================================================================================
 #   FUNCTIONS
 #======================================================================================
@@ -35,6 +40,11 @@ alias jup='jupyter notebook'
 
 function howto () { 					# open Garg's medium article on .bash_profile
 open -a "Google Chrome" https://medium.com/the-data-experience/how-to-bash-de53839f919a; 
+echo "Page opened in google chrome.";
+}
+
+function bashtutorial () {                                     # open Ryan's tutorial on bash
+open -a "Google Chrome" https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php;
 echo "Page opened in google chrome.";
 }
 
@@ -79,8 +89,8 @@ function load () {
 #====================================================================================
 #   POSTGRESS 
 #====================================================================================
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
-
+#export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+#
 #====================================================================================
 #   BSD LSCOLORS 
 #====================================================================================
